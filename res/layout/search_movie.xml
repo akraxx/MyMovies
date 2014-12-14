@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:id="@+id/search_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/search_movie"
+        android:textSize="20sp" />
+     
+    
+	 <LinearLayout
+	        android:id="@+id/searchMovie_fields"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/search_movie"
+	        android:layout_marginLeft="25dp"
+	        android:layout_marginRight="25dp"
+	        android:layout_marginTop="15dp"
+	        android:orientation="vertical" >
+	
+	        <TextView
+	            android:id="@+id/searchMovie_title"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/typeTitle" />
+	        
+	        <EditText
+	            android:id="@+id/searchMovie_title_edittext"
+	            android:layout_width="188dp"
+	            android:layout_height="wrap_content"
+	            android:hint="@string/title" />
+	        
+	</LinearLayout>
+
+ <Button
+     android:id="@+id/searchMovie_button"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignBottom="@+id/searchMovie_fields"
+     android:layout_alignParentRight="true"
+     android:text="@string/search" />
+
+    <ListView
+        android:id="@+id/searchMoviesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/searchMovie_fields" >
+
+    </ListView>
+    
+</RelativeLayout>

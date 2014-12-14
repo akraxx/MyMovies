@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:id="@+id/add_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_movie"
+        android:textSize="20sp" />
+     
+	<RadioGroup
+	android:id="@+id/radiogroup_addmovie"
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/add_movie"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <RadioButton android:id="@+id/radio_towatch"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/towatch"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton android:id="@+id/radio_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history"
+        android:onClick="onRadioButtonClicked"/>
+	</RadioGroup>
+    
+	 <LinearLayout
+	        android:id="@+id/addMovie_fields"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/radiogroup_addmovie"
+	        android:layout_marginLeft="25dp"
+	        android:layout_marginRight="25dp"
+	        android:layout_marginTop="15dp"
+	        android:orientation="vertical" >
+	
+	        <TextView
+	            android:id="@+id/title_textview"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/typeTitle" />
+	        
+	        <EditText
+            android:id="@+id/title_edittext_toWatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ex: Iron Man" />
+	        
+	        <TextView
+	            android:id="@+id/date_textview"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="15dp"
+	            android:text="Type the year of the film : " />
+	        
+	        <EditText
+            android:id="@+id/year_edittext_toWatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ex: 2013" />
+	
+	</LinearLayout>
+
+ <Button
+     android:id="@+id/addMovie_button"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_alignRight="@+id/addMovie_fields"
+     android:text="@string/save" />
+
+</RelativeLayout>
